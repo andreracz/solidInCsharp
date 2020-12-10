@@ -15,9 +15,9 @@ namespace solidInCsharp.Controllers
     
 
         private readonly ILogger<UsuarioController> _logger;
-		private readonly UsuarioService usuarioService;
+		private readonly IUsuarioService usuarioService;
 
-        public UsuarioController(ILogger<UsuarioController> logger, UsuarioService usuarioService)
+        public UsuarioController(ILogger<UsuarioController> logger, IUsuarioService usuarioService)
         {
             _logger = logger;
 			this.usuarioService = usuarioService;

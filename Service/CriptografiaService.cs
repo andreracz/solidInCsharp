@@ -14,7 +14,7 @@ using solidInCsharp.Repository;
 
 namespace solidInCsharp.Service
 {
-    public class CriptografiaService
+    public class CriptografiaService: ICriptografiaService
     {
 
 		public bool ValidarSenha(string senhaCripto, string senhaDigitada) {

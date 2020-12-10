@@ -14,7 +14,7 @@ using solidInCsharp.Repository;
 
 namespace solidInCsharp.Service
 {
-    public class JWTService
+    public class JWTService: IJWTService
     {
 
 		public string GerarToken(Usuario user) {

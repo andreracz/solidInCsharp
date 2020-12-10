@@ -17,9 +17,9 @@ namespace solidInCsharp.Controllers
     
 
         private readonly ILogger<ProdutoController> _logger;
-		private readonly ProdutoReportService produtoReportService;
+		private readonly IProdutoReportService produtoReportService;
 
-        public ProdutoController(ILogger<ProdutoController> logger, ProdutoReportService produtoReportService)
+        public ProdutoController(ILogger<ProdutoController> logger, IProdutoReportService produtoReportService)
         {
             _logger = logger;
 			this.produtoReportService = produtoReportService;

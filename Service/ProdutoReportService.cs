@@ -5,7 +5,7 @@ using solidInCsharp.Repository;
 
 namespace solidInCsharp.Service
 {
-    public class ProdutoReportService
+    public class ProdutoReportService: IProdutoReportService
     {
 
 		private IProdutoRepository repository;

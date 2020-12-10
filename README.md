@@ -20,7 +20,8 @@ O projeto aqui mostrado é um serviço REST, que, no commit inicial. viola estes
 
 A descrição das mudanças se encontra nos links abaixo:
 
-* [1 - SRP - Principio da responsabilidade única](1-SRP.md) - Commit: https://github.com/andreracz/solidInCsharp/commit/67e908ae29520ee38bc1680a522e705c93b063aa
-* [2 - OCP - Principio Aberto/Fechado.md](2-OCP.md) - Commit: https://github.com/andreracz/solidInCsharp/commit/ad89266a944acce58f60d7a84a9d4c3b89b938be
-* [3 - LSP - Principio da Substituição de Liskov](3-LSP.md) - Commit: https://github.com/andreracz/solidInCsharp/commit/8e04fae347970d027266a3417aa460206c156850
-* [4 - ISP - Interface Segregation Principle](4-ISP.md)
+* [1 - SRP - Principio da responsabilidade única](1-SRP.md) - Commit: [67e908a](https://github.com/andreracz/solidInCsharp/commit/67e908ae29520ee38bc1680a522e705c93b063aa)
+* [2 - OCP - Principio Aberto/Fechado.md](2-OCP.md) - Commit: [ad89266](https://github.com/andreracz/solidInCsharp/commit/ad89266a944acce58f60d7a84a9d4c3b89b938be)
+* [3 - LSP - Principio da Substituição de Liskov](3-LSP.md) - Commit: [8e04fae](https://github.com/andreracz/solidInCsharp/commit/8e04fae347970d027266a3417aa460206c156850)
+* [4 - ISP - Principio de Segregação de Interfaces](4-ISP.md) - Commit: [8b0f804](https://github.com/andreracz/solidInCsharp/commit/8b0f80442a6b9d2941207598c18e93b76f7c633a)
+* [5 - DIP - Principio da Inversão de Dependencia](5-DIP.md)

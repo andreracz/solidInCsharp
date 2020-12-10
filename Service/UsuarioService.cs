@@ -14,12 +14,18 @@ using solidInCsharp.Repository;
 
 namespace solidInCsharp.Service
 {
-    public class UsuarioService
+    public class UsuarioService: IUsuarioService
     {
 		private IUsuarioRepository repository;
 
-        public UsuarioService(IUsuarioRepository repository){ 
+		private ICriptografiaService criptografiaService;
+
+		private IJWTService jWTService;
+
+        public UsuarioService(IUsuarioRepository repository, ICriptografiaService criptografia, IJWTService jwt){ 
 			this.repository = repository;
+			this.criptografiaService = criptografia;
+			this.jWTService = jwt;
 		}
 
 		public void CriarUsuario(string Email, string Name, string Password) {
@@ -27,16 +33,16 @@ namespace solidInCsharp.Service
 			if (user != null) {
 				throw new Exception("Erro, usuário já existe");
 			}
-			user = new Usuario() { Email = Email, Nome = Name, Senha = new CriptografiaService().CriptografarSenha(Password)};
+			user = new Usuario() { Email = Email, Nome = Name, Senha = criptografiaService.CriptografarSenha(Password)};
 			this.repository.Add(user);
 		}
 
 		public string Login(string Email,  string Password) {
 			var user = this.repository.ObterUsuario(Email);
-			if (user == null || !new CriptografiaService().ValidarSenha(user.Senha, Password)) {
+			if (user == null || !criptografiaService.ValidarSenha(user.Senha, Password)) {
 				throw new Exception("Erro, usuário ou senha incorreto");
 			}
-			return new JWTService().GerarToken(user);
+			return jWTService.GerarToken(user);
 		}
 
 

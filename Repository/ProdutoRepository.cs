@@ -5,13 +5,14 @@ using System.Linq;
 
 namespace solidInCsharp.Repository
 {
-    public class ProdutoRepository: BaseRepository<Produto, ProdutoRepository>
+    public class ProdutoRepository: BaseReadOnlyRepository<Produto, ProdutoRepository>
     {
 
         public ProdutoRepository(DbContextOptions<ProdutoRepository> options)
 			: base(options)
 		{
 			var itens =this.Items.ToArray();
+			// Apenas para simular uma base já preenchida
 			if (itens.Length == 0) {
 				this.Items.Add(new Produto(){ Id="1", Nome="Produto 1", Preco = 10});
 				this.Items.Add(new Produto(){ Id="2", Nome="Produto 2", Preco = 20});
@@ -19,16 +20,5 @@ namespace solidInCsharp.Repository
 			}
 		 }
 
-		public new void Add(Produto item) {
-			throw new Exception("Products are readonly");
-		}
-
-		public new void Update(Produto item) {
-			throw new Exception("Products are readonly");
-		}
-
-		public new void Remove(Produto item) {
-			throw new Exception("Products are readonly");
-		}
     }
 }

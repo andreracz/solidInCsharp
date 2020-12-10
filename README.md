@@ -17,3 +17,6 @@ Os principios do SOLID são:
 | D | Dependency Inversion Principle  | DIP  | Dependa de Abstrações, não de classes concretas                                                                |
 
 O projeto aqui mostrado é um serviço REST, que, no commit inicial. viola estes princípios. Em cada Commit, ataco um dos princípios, corrigindo sua implementação.
+
+A descrição das mudanças se encontra nos links abaixo:
+[1 - SRP - Principio da responsabilidade única](1-SRP.md)

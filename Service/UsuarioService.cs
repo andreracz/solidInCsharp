@@ -16,9 +16,9 @@ namespace solidInCsharp.Service
 {
     public class UsuarioService
     {
-		private UsuarioRepository repository;
+		private IUsuarioRepository repository;
 
-        public UsuarioService(UsuarioRepository repository){ 
+        public UsuarioService(IUsuarioRepository repository){ 
 			this.repository = repository;
 		}
 

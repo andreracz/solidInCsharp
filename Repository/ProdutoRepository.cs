@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace solidInCsharp.Repository
 {
-    public class ProdutoRepository: BaseReadOnlyRepository<Produto, ProdutoRepository>
+    public class ProdutoRepository: BaseReadOnlyRepository<Produto, ProdutoRepository>, IProdutoRepository
     {
 
         public ProdutoRepository(DbContextOptions<ProdutoRepository> options)

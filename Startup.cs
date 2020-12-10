@@ -56,6 +56,9 @@ namespace solidInCsharp
 			services.AddDbContext<UsuarioRepository>(options => options.UseInMemoryDatabase(databaseName: "Test"));
 			services.AddDbContext<ProdutoRepository>(options => options.UseInMemoryDatabase(databaseName: "Test") );
 			
+			services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+			services.AddScoped<IProdutoRepository, ProdutoRepository>();
+
 			services.AddScoped<UsuarioService, UsuarioService>();
 			services.AddScoped<ProdutoReportService, ProdutoReportService>();
         }

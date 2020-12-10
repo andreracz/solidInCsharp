@@ -8,9 +8,9 @@ namespace solidInCsharp.Service
     public class ProdutoReportService
     {
 
-		private ProdutoRepository repository;
+		private IProdutoRepository repository;
 
-        public ProdutoReportService(ProdutoRepository repository) {
+        public ProdutoReportService(IProdutoRepository repository) {
 			this.repository = repository;
 		}
 

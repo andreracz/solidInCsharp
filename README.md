@@ -19,4 +19,6 @@ Os principios do SOLID são:
 O projeto aqui mostrado é um serviço REST, que, no commit inicial. viola estes princípios. Em cada Commit, ataco um dos princípios, corrigindo sua implementação.
 
 A descrição das mudanças se encontra nos links abaixo:
-[1 - SRP - Principio da responsabilidade única](1-SRP.md)
+
+* [1 - SRP - Principio da responsabilidade única](1-SRP.md) - [Commit](67e908ae29520ee38bc1680a522e705c93b063aa)
+* [2 - OCP - Principio Aberto/Fechado.md](2-OCP.md)

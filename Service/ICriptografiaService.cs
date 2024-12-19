@@ -21,5 +21,9 @@ namespace solidInCsharp.Service
 
 		public string CriptografarSenha(string senha);
 
+        public string Encrypt(string plainText, string key);
+
+        public string Decrypt(string cipherText, string key);
+
     }
 }

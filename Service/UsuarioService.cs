@@ -43,8 +43,16 @@ namespace solidInCsharp.Service
 				throw new Exception("Erro, usuário ou senha incorreto");
 			}
 			return jWTService.GerarToken(user);
+			}
+
+		public string EncryptData(string plainText, string key)
+		{
+			return criptografiaService.Encrypt(plainText, key);
 		}
 
-
+		public string DecryptData(string cipherText, string key)
+		{
+			return criptografiaService.Decrypt(cipherText, key);
+		}
     }
 }
